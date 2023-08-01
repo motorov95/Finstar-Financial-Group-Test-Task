@@ -49,4 +49,32 @@ class SavedCalculation {
         time: json['time'],
         totalPayments: json['totalPayments']);
   }
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is SavedCalculation &&
+          payments == other.payments &&
+          monthlyPayment == other.monthlyPayment &&
+          isAnnuityPayment == other.isAnnuityPayment &&
+          monthlyPayment == other.monthlyPayment &&
+          totalInterestPayment == other.totalInterestPayment &&
+          amount == other.amount &&
+          interestRate == other.interestRate &&
+          loanTerm == other.loanTerm &&
+          time == other.time &&
+          totalPayments == other.totalPayments;
+
+  @override
+  int get hashCode =>
+      payments.hashCode ^
+      monthlyPayment.hashCode ^
+      isAnnuityPayment.hashCode ^
+      monthlyPayment.hashCode ^
+      totalInterestPayment.hashCode ^
+      amount.hashCode ^
+      interestRate.hashCode ^
+      loanTerm.hashCode ^
+      time.hashCode ^
+      totalPayments.hashCode;
 }

@@ -31,4 +31,21 @@ class MonthlyPayment {
       remainPayment: json['remainPayment'],
     );
   }
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is MonthlyPayment &&
+          month == other.month &&
+          monthlyPayment == other.monthlyPayment &&
+          interestPayment == other.interestPayment &&
+          principalPayment == other.principalPayment &&
+          remainPayment == other.remainPayment;
+
+  @override
+  int get hashCode =>
+      month.hashCode ^
+      monthlyPayment.hashCode ^
+      interestPayment.hashCode ^
+      principalPayment.hashCode ^
+      remainPayment.hashCode;
 }
