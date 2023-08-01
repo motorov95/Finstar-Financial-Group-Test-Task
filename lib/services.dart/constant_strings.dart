@@ -12,7 +12,7 @@ class Constants {
       "Годовая процентная ставка не может быть больше $maxInterestRate%!";
   static const overLoanTermError =
       "Срок кредита не может быть больше $maxLoanTermMonths месяцев!";
-  static const companyName = 'Finstar Financial Company';
+  static const companyName = 'Finstar Financial Group';
   static const calculateCreditString = "Рассчитать кредит";
   static const loanAmountString = "Сумма кредита (руб.)";
   static final regExpForInterestRate = RegExp(r'^\d+\.?\d{0,2}');
