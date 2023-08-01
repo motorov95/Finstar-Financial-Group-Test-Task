@@ -1,5 +1,4 @@
 import 'package:calc/bloc/calculating_bloc.dart';
-import 'package:calc/screens/payment_table_screen.dart';
 import 'package:calc/services.dart/constant_strings.dart';
 import 'package:calc/services.dart/fields_properties.dart';
 import 'package:calc/widgets/chart.dart';
@@ -123,7 +122,7 @@ class CreditCalculatorScreen extends StatelessWidget {
               Obx(() => !s.isCalculated.value
                   ? Container()
                   : ElevatedButton(
-                      onPressed: () => Get.to(PaymentTableScreen()),
+                      onPressed: () => Get.toNamed("tableScreen"),
                       child: const Text(Constants.goToTableButtonString))),
               const SizedBox(
                 height: 20,
